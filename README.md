@@ -14,7 +14,7 @@
 <h4 align="center">
     A userstyle that makes rounding on elements more uniform across YouTube.
 </h4>
-<div class="container">
+<div class="container" align="center">
     <img src="https://github.com/aoqia194/Userstyles/raw/main/docs/images/YouTubeUniformRounding_preview.png" alt="YouTube Uniform Rounding Style Preview Image" width="726" class="item">
     <img src="https://github.com/aoqia194/Userstyles/raw/main/docs/images/YouTubeUniformRounding_preview_channel.png" alt="YouTube Uniform Rounding Style Preview Image" width="726" class="item">
 </div>
