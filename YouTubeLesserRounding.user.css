@@ -1,15 +1,8 @@
-/* ==UserStyle==
-@name           YouTube Lesser Rounding
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    A userstyle to make the rounding of objects like the like buttons uniform and less round.
-@author         aoqia
-@updateURL https://github.com/aoqia194/Userstyles/raw/main/YouTubeLesserRounding.user.css
-==/UserStyle== */
 @-moz-document domain("youtube.com") {
     html {
         --yt-global-border-radius: 0.8rem;
         --yt-global-circle-border-radius: 0.4rem;
+
         --yt-img-border-radius: var(--yt-global-border-radius);
         --yt-button-border-radius: var(--yt-global-border-radius);
         --yt-live-chat-poll-choice-border-radius: var(--yt-global-border-radius);
@@ -17,107 +10,122 @@
         --paper-item-focused-before-border-radius: var(--yt-global-border-radius);
     }
 
-    #search-icon-legacy.ytd-searchbox,
-    .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--segmented-end {
-        border-radius: 0 var(--yt-global-border-radius) var(--yt-global-border-radius) 0;
-    }
-
-    #container.ytd-searchbox,
-    .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--segmented-start {
-        border-radius: var(--yt-global-border-radius) 0 0 var(--yt-global-border-radius);
-    }
+    /* Small Fixes */
 
     ytd-compact-link-renderer {
         width: 90%;
-        margin-left: 5%;
+        margin-left: 5%
     }
 
     ytd-toggle-theme-compact-link-renderer {
         width: 79.5%;
-        /* Worst Hotfix Ever */
-        margin-left: 5%;
+        margin-left: 5%
     }
+
+    /* Rounding */
 
     #hearted-thumbnail.ytd-creator-heart-renderer,
     .ytd-creator-heart-renderer button yt-img-shadow img.yt-img-shadow {
-        border-radius: var(--yt-global-circle-border-radius);
+        border-radius: var(--yt-global-circle-border-radius)
     }
 
-    yt-icon-button.ytd-masthead:hover,
-    ytd-topbar-menu-button-renderer.ytd-masthead:hover,
-    ytd-notification-topbar-button-renderer.ytd-masthead:hover,
-    yt-img-shadow.ytd-topbar-menu-button-renderer,
-    #voice-search-button.ytd-masthead,
-    .yt-spec-button-shape-next--icon-only-default,
-    .masthead-skeleton-icon,
-    html body[rounded-container] tp-yt-paper-tooltip .tp-yt-paper-tooltip[style-target=tooltip],
-    yt-chip-cloud-chip-renderer,
-    .sbsb_a,
-    yt-interaction.circular .fill.yt-interaction,
-    yt-interaction.circular .stroke.yt-interaction,
-    ytd-multi-page-menu-renderer,
-    ytd-compact-link-renderer,
-    ytd-toggle-theme-compact-link-renderer,
-    #avatar.ytd-active-account-header-renderer,
-    yt-img-shadow.ytd-account-item-renderer,
-    .toggle-button.tp-yt-paper-toggle-button,
-    .toggle-bar.tp-yt-paper-toggle-button,
-    yt-img-shadow.ytd-channel-options-renderer,
-    tp-yt-paper-dropdown-menu-light,
-    #checkbox.tp-yt-paper-checkbox,
-    paper-ripple.circle #background.paper-ripple,
-    paper-ripple.circle #waves.paper-ripple,
-    #offRadio.tp-yt-paper-radio-button,
-    #onRadio.tp-yt-paper-radio-button,
-    yt-img-shadow.ytd-connected-app-renderer,
-    .yt-spec-button-shape-next--size-m,
-    #bar.yt-copy-link-renderer,
-    ytd-author-comment-badge-renderer,
+    #search-icon-legacy.ytd-searchbox,
+    .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--segmented-end {
+        border-radius: 0 var(--yt-global-border-radius) var(--yt-global-border-radius) 0
+    }
+
+    #container.ytd-searchbox,
+    .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--segmented-start {
+        border-radius: var(--yt-global-border-radius) 0 0 var(--yt-global-border-radius)
+    }
+
+    ytd-live-chat-frame[rounded-container] #show-hide-button.ytd-live-chat-frame ytd-toggle-button-renderer.ytd-live-chat-frame {
+        border-radius: 0 0 var(--yt-global-border-radius) var(--yt-global-border-radius)
+    }
+
+    #author-photo.yt-live-chat-paid-message-renderer,
+    #author-photo.yt-live-chat-text-message-renderer,
     #author-thumbnail.ytd-comment-renderer yt-img-shadow.ytd-comment-renderer,
-    ytd-comment-replies-renderer #creator-thumbnail.ytd-comment-replies-renderer yt-img-shadow.ytd-comment-replies-renderer,
-    ytd-notification-renderer[rounded-thumbnails] .thumbnail-container.ytd-notification-renderer,
-    .thumbnail.ytd-notification-renderer,
-    ytd-thumbnail[size=large] a.ytd-thumbnail,
-    ytd-thumbnail[size=large]:before,
-    #avatar.ytd-rich-grid-media,
-    yt-interaction.extended .fill.yt-interaction,
-    yt-interaction.extended .stroke.yt-interaction,
-    .badge.ytd-badge-supported-renderer,
-    ytd-post-renderer[rounded-container],
-    ytd-backstage-image-renderer[rounded] #image-container.ytd-backstage-image-renderer yt-img-shadow.ytd-backstage-image-renderer,
-    yt-img-shadow.ytd-guide-entry-renderer,
-    .yt-spec-touch-feedback-shape,
-    .yt-spec-button-shape-next--size-s,
-    ytd-backstage-post-thread-renderer[rounded-container],
-    ytd-backstage-poll-renderer[is-image-poll] .vote-choice.ytd-backstage-poll-renderer,
-    .choice-image.ytd-backstage-poll-renderer,
+    #avatar.ytd-active-account-header-renderer,
     #avatar.ytd-c4-tabbed-header-renderer,
-    tp-yt-paper-dialog[modern],
-    ytd-thumbnail[size=medium] a.ytd-thumbnail,
-    ytd-thumbnail[size=medium]:before,
-    #time-status.ytd-thumbnail-overlay-time-status-renderer,
-    .ytp-settings-menu,
-    .ytp-menuitem-toggle-checkbox:after,
-    ytd-watch-flexy[rounded-player-large][default-layout] #ytd-player.ytd-watch-flexy,
+    #avatar.ytd-rich-grid-media,
     #avatar.ytd-video-owner-renderer,
-    .scroll-button.yt-third-party-share-target-section-renderer,
-    #target.yt-share-target-renderer,
-    .caption-window.ytp-caption-window-bottom.ytp-caption-window-rollup,
+    #bar.yt-copy-link-renderer,
+    #checkbox.tp-yt-paper-checkbox,
+    #container.yt-live-chat-ticker-paid-message-item-renderer,
     #description.ytd-watch-metadata,
     #header.ytd-video-description-infocards-section-renderer #thumbnail.ytd-video-description-infocards-section-renderer,
+    #offRadio.tp-yt-paper-radio-button,
+    #onRadio.tp-yt-paper-radio-button,
+    #target.yt-share-target-renderer,
+    #time-status.ytd-thumbnail-overlay-time-status-renderer,
+    #voice-search-button.ytd-masthead,
+    .badge.ytd-badge-supported-renderer,
+    .caption-window.ytp-caption-window-bottom.ytp-caption-window-rollup,
+    .choice-image.ytd-backstage-poll-renderer,
+    .masthead-skeleton-icon,
+    .sbsb_a,
+    .scroll-button.yt-third-party-share-target-section-renderer,
+    .thumbnail.ytd-notification-renderer,
+    .toggle-bar.tp-yt-paper-toggle-button,
+    .toggle-button.tp-yt-paper-toggle-button,
+    .yt-spec-button-shape-next--icon-only-default,
+    .yt-spec-button-shape-next--size-m,
+    .yt-spec-button-shape-next--size-s,
+    .yt-spec-touch-feedback-shape,
+    .ytp-ce-channel,
+    .ytp-ce-channel .ytp-ce-element-shadow,
+    .ytp-ce-channel .ytp-ce-expanding-image,
+    .ytp-ce-large-round .ytp-ce-expanding-overlay-background,
+    .ytp-ce-playlist.ytp-ce-large-round,
+    .ytp-ce-video.ytp-ce-large-round,
+    .ytp-menuitem-toggle-checkbox:after,
+    .ytp-settings-menu,
+    .ytp-videowall-still-round-large .ytp-videowall-still-image,
+    html body[rounded-container] tp-yt-paper-tooltip .tp-yt-paper-tooltip[style-target=tooltip],
+    paper-ripple.circle #background.paper-ripple,
+    paper-ripple.circle #waves.paper-ripple,
+    tp-yt-paper-dialog[modern],
+    tp-yt-paper-dropdown-menu-light,
+    yt-chip-cloud-chip-renderer,
+    yt-dropdown-menu[modern-dialogs] #menu.yt-dropdown-menu,
+    yt-icon-button.yt-live-chat-item-list-renderer,
+    yt-icon-button.ytd-masthead:hover,
+    yt-img-shadow.yt-live-chat-ticker-paid-message-item-renderer,
+    yt-img-shadow.ytd-account-item-renderer,
+    yt-img-shadow.ytd-channel-options-renderer,
+    yt-img-shadow.ytd-connected-app-renderer,
+    yt-img-shadow.ytd-guide-entry-renderer,
+    yt-img-shadow.ytd-topbar-menu-button-renderer,
+    yt-interaction.circular .fill.yt-interaction,
+    yt-interaction.circular .stroke.yt-interaction,
+    yt-interaction.extended .fill.yt-interaction,
+    yt-interaction.extended .stroke.yt-interaction,
+    yt-live-chat-paid-message-renderer[is-v2-style] #card.yt-live-chat-paid-message-renderer,
+    ytd-author-comment-badge-renderer,
+    ytd-backstage-image-renderer[rounded] #image-container.ytd-backstage-image-renderer yt-img-shadow.ytd-backstage-image-renderer,
+    ytd-backstage-poll-renderer[is-image-poll] .vote-choice.ytd-backstage-poll-renderer,
+    ytd-backstage-post-thread-renderer[rounded-container],
+    ytd-comment-replies-renderer #creator-thumbnail.ytd-comment-replies-renderer yt-img-shadow.ytd-comment-replies-renderer,
+    ytd-compact-link-renderer,
     ytd-engagement-panel-section-list-renderer[modern-panels]:not([live-chat-engagement-panel]),
-    ytd-transcript-segment-renderer[rounded-container] .segment-timestamp.ytd-transcript-segment-renderer,
-    ytd-rich-metadata-renderer[rounded],
+    ytd-live-chat-frame[rounded-container]:not([theater-watch-while]),
+    ytd-multi-page-menu-renderer,
+    ytd-notification-renderer[rounded-thumbnails] .thumbnail-container.ytd-notification-renderer,
+    ytd-notification-topbar-button-renderer.ytd-masthead:hover,
+    ytd-post-renderer[rounded-container],
     ytd-rich-metadata-renderer[component-style=RICH_METADATA_RENDERER_STYLE_BOX_ART] #thumbnail.ytd-rich-metadata-renderer,
     ytd-rich-metadata-renderer[component-style=RICH_METADATA_RENDERER_STYLE_TOPIC] #thumbnail.ytd-rich-metadata-renderer,
-    .ytp-videowall-still-round-large .ytp-videowall-still-image,
-    .ytp-ce-channel,
-    .ytp-ce-channel .ytp-ce-expanding-image,
-    .ytp-ce-channel .ytp-ce-element-shadow,
-    .ytp-ce-video.ytp-ce-large-round,
-    .ytp-ce-playlist.ytp-ce-large-round,
-    .ytp-ce-large-round .ytp-ce-expanding-overlay-background {
+    ytd-rich-metadata-renderer[rounded],
+    ytd-thumbnail[size=large] a.ytd-thumbnail,
+    ytd-thumbnail[size=large]:before,
+    ytd-thumbnail[size=medium] a.ytd-thumbnail,
+    ytd-thumbnail[size=medium]:before,
+    ytd-toggle-theme-compact-link-renderer,
+    ytd-topbar-menu-button-renderer.ytd-masthead:hover,
+    ytd-transcript-segment-renderer[rounded-container] .segment-timestamp.ytd-transcript-segment-renderer,
+    ytd-watch-flexy[rounded-player-large][default-layout] #ytd-player.ytd-watch-flexy {
         border-radius: var(--yt-global-border-radius);
-        --yt-img-border-radius: var(--yt-global-border-radius);
+        --yt-img-border-radius: var(--yt-global-border-radius)
     }
 }
