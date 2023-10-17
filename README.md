@@ -19,6 +19,7 @@
     <img src="https://github.com/aoqia194/Userstyles/raw/main/docs/images/YouTubeUniformRounding_preview_channel.png" alt="YouTube Uniform Rounding Style Preview Image" width="726" class="item">
 </div>
 
+<!--
 <style>
 .container {
   display: flex;
@@ -33,3 +34,4 @@
   margin: 10px;
 }
 </style>
+-->
