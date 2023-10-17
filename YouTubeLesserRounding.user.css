@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name           YouTube Lesser Rounding
+@namespace      github.com/openstyles/stylus
+@version        1.0.1
+@description    A userstyle to make the rounding of objects like the like buttons uniform and less round.
+@author         aoqia
+@updateURL https://github.com/aoqia194/Userstyles/raw/main/YouTubeLesserRounding.user.css
+==/UserStyle== */
+
 @-moz-document domain("youtube.com") {
     html {
         --yt-global-border-radius: 0.8rem;
