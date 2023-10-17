@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name           YouTube Lesser Rounding
+@name           YouTube Uniform Rounding
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
-@description    A userstyle to make the rounding of objects like the like buttons uniform and less round.
+@version        1.0.2
+@description    A userstyle that makes rounding on elements more uniform across YouTube.
 @author         aoqia
-@updateURL https://github.com/aoqia194/Userstyles/raw/main/YouTubeLesserRounding.user.css
+@updateURL https://github.com/aoqia194/Userstyles/raw/main/YouTubeUniformRounding.user.css
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
@@ -104,6 +104,7 @@
     yt-img-shadow.ytd-account-item-renderer,
     yt-img-shadow.ytd-channel-options-renderer,
     yt-img-shadow.ytd-connected-app-renderer,
+    yt-img-shadow.ytd-grid-channel-renderer,
     yt-img-shadow.ytd-guide-entry-renderer,
     yt-img-shadow.ytd-topbar-menu-button-renderer,
     yt-interaction.circular .fill.yt-interaction,
@@ -122,6 +123,8 @@
     ytd-multi-page-menu-renderer,
     ytd-notification-renderer[rounded-thumbnails] .thumbnail-container.ytd-notification-renderer,
     ytd-notification-topbar-button-renderer.ytd-masthead:hover,
+    ytd-playlist-thumbnail[size=medium] a.ytd-playlist-thumbnail,
+    ytd-playlist-thumbnail[size=medium]:before,
     ytd-post-renderer[rounded-container],
     ytd-rich-metadata-renderer[component-style=RICH_METADATA_RENDERER_STYLE_BOX_ART] #thumbnail.ytd-rich-metadata-renderer,
     ytd-rich-metadata-renderer[component-style=RICH_METADATA_RENDERER_STYLE_TOPIC] #thumbnail.ytd-rich-metadata-renderer,
