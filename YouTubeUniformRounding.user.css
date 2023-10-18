@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube Uniform Rounding
 @namespace      github.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.3
 @description    A userstyle that makes rounding on elements more uniform across YouTube.
 @author         aoqia
 @updateURL https://github.com/aoqia194/Userstyles/raw/main/YouTubeUniformRounding.user.css
@@ -69,6 +69,7 @@
     #target.yt-share-target-renderer,
     #time-status.ytd-thumbnail-overlay-time-status-renderer,
     #voice-search-button.ytd-masthead,
+    .arrow.yt-horizontal-list-renderer,
     .badge.ytd-badge-supported-renderer,
     .caption-window.ytp-caption-window-bottom.ytp-caption-window-rollup,
     .choice-image.ytd-backstage-poll-renderer,
